@@ -1,0 +1,43 @@
+﻿@model WebNavi.Models.GpsData
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>GpsData</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Latitude)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Latitude)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Lontitude)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Lontitude)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Satellite)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Satellite)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Battery)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Battery)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
